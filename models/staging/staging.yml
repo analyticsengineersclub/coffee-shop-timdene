@@ -44,3 +44,9 @@ models:
     columns:
       - name: product_id
         description: Primary key
+  
+  - name: stg_pageviews
+    description: Each row represents a pageview
+    columns:
+      - name: pageview_id
+        description: Primary key
