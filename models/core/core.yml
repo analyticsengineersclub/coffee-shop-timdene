@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: order_item_sales
+    description: Each row represents an order item
+    columns:
+      - name: order_item_id
+        description: Foreign key to stg_order_items
+        tests:
+          - not_null
+          - unique
