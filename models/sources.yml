@@ -28,9 +28,8 @@ sources:
         columns:
           - name: id
             tests:
-              - unique
               - not_null
-      
+
       - name: product_prices
         columns:
           - name: id
@@ -50,3 +49,14 @@ sources:
                   values: ['coffee beans', 'brewing supplies', 'merch']
                   config:
                     severity: warn
+                    
+  - name: web_tracking
+    project: analytics-engineers-club
+    tables:
+      - name: pageviews
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      
