@@ -9,3 +9,17 @@ models:
         tests:
           - not_null
           - unique
+  
+  - name: pageviews
+    description: Each row represents a pageview    
+    columns:
+      - name: pageview_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+      - name: customer_visitor_id
+        description: Surrogate visitor id for the pageview including "logged out" sessions
+        tests:
+          - one_record_per:
+              per: customer_id
