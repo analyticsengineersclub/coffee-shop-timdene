@@ -13,3 +13,10 @@ Try running the following commands:
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+<!-- Steps to create a merge conflict:
+     1. checkout a new branch locally
+     2. merge this PR
+     3. change these same lines on your local branch
+     4. open a new PR. 
+     This will show merge conflicts. Resolve them with rebase :)  -->

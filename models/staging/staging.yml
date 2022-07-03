@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Each row represents a customer
+    columns:
+      - name: customer_id
+        description: Primary key
+
+  - name: stg_orders
+    description: Each row represents an order
+    columns:
+      - name: order_id
+        description: Primary key
+      - name: customer_id
+        description: Foreign key to stg_customers
+      - name: total
+        description: Total quantity of items ordered
+
+  - name: stg_order_items
+    description: Each row represents an item in an order
+    columns:
+      - name: order_item_id
+        description: Primary key
+      - name: order_id
+        description: Foreign key to stg_orders
+      - name: product_id
+        description: Foreign key to stg_products
+
+  - name: stg_product_prices
+    description: Each row represents a period in which a product price was valid
+    columns:
+      - name: product_price_id
+        description: Primary key
+      - name: product_id
+        description: Foreign key to stg_products
+      - name: created_at
+        description: The first date the price was valid
+      - name: ended_at
+        description: The last date the price was valid
+
+  - name: stg_products
+    description: Each row represents a product
+    columns:
+      - name: product_id
+        description: Primary key
