@@ -15,7 +15,7 @@ models:
       - name: customer_id
         description: Foreign key to stg_customers
       - name: total
-        description: Total quantity of items ordered
+        description: Total revenue from the order
 
   - name: stg_order_items
     description: Each row represents an item in an order
@@ -43,4 +43,10 @@ models:
     description: Each row represents a product
     columns:
       - name: product_id
+        description: Primary key
+  
+  - name: stg_pageviews
+    description: Each row represents a pageview
+    columns:
+      - name: pageview_id
         description: Primary key
