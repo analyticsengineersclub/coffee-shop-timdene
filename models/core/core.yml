@@ -1,7 +1,6 @@
 version: 2
 
 models:
-<<<<<<< HEAD
   - name: order_item_sales
     description: Each row represents an order item
     columns:
@@ -13,12 +12,6 @@ models:
   
   - name: pageviews
     description: Each row represents a pageview    
-=======
-  - name: pageviews
-    description: Each row represents a pageview
-    tests:
-      
->>>>>>> ff5d739... create pageviews
     columns:
       - name: pageview_id
         description: Primary key
@@ -26,14 +19,7 @@ models:
           - not_null
           - unique
       - name: customer_visitor_id
-<<<<<<< HEAD
         description: Surrogate visitor id for the pageview including "logged out" sessions
         tests:
           - one_record_per:
               per: customer_id
-=======
-        description: The stitched customer id for all pageviews including "logged out" sessions. Foreign key for stg_customers
-        # tests:
-        #   # - one_record_per:
-        #   #     per: customer_id
->>>>>>> ff5d739... create pageviews
