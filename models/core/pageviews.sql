@@ -70,6 +70,8 @@ select
   pageview.url_path,
   pageview.device_type,
   pageview.timestamp,
+  min(pageview.timestamp) over (partition by sessionize.session_id) as session_start_at,
+  max(pageview.timestamp) over (partition by sessionize.session_id) as session_end_at,
 
 from {{ ref('stg_pageviews') }} pageview
 
