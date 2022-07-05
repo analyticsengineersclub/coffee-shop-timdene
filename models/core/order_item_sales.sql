@@ -55,9 +55,9 @@ final as (
     if(prices.time_precision_price is null, prices.day_precision_price, prices.time_precision_price) as order_item_total,
     customer_orders.created_at as created_at,
 
-  from customer_orders
+  from prices
   
-  left join prices
+  left join customer_orders
     on customer_orders.order_id = prices.order_id
 
   left join product
