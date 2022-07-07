@@ -36,4 +36,5 @@ models:
     columns: true
   coffee_shop_timdene:
     # Config indicated by + and applies to all files under models/example/
-    
+    core:
+      +materialized: table

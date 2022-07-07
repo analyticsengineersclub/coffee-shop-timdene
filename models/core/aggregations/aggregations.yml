@@ -1,0 +1,16 @@
+version: 2
+
+models:
+
+  - name: sessions
+    description: Each row represents a session
+    columns:
+      - name: session_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: session_duration
+        description: Duration of the session in milliseconds
+      - name: has_purchase
+        description: True/false whether the session ended with a purchase
