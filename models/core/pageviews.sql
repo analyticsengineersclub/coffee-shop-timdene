@@ -14,7 +14,7 @@ user_stitch as (
 --create customer_visitor_id for each known visitor
     select
         pageview_id,
-        cast(md5(coalesce(user_visitor.customer_id, user_visitor.visitor_id)) as string format 'HEX') as customer_visitor_id, --MD5 returns BYTES by default
+        coalesce(user_visitor.customer_id, user_visitor.visitor_id) as customer_visitor_id,
         pageview.visitor_id as network_visitor_id,
         timestamp,
     from {{ ref('stg_pageviews') }} pageview
