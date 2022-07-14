@@ -1,3 +1,9 @@
+{{
+  config(
+    cluster_by = 'date_day',
+    )
+}}
+
 --USER STITCHING
 
 with user_visitor as (
@@ -70,7 +76,7 @@ select
   pageview.url_path,
   pageview.device_type,
   pageview.timestamp,
-  timestamp_trunc(pageview.timestamp, day) as date_day, 
+  timestamp_trunc(pageview.timestamp, day) as date_day,
   min(pageview.timestamp) over (partition by sessionize.session_id) as session_start_at,
   max(pageview.timestamp) over (partition by sessionize.session_id) as session_end_at,
 
