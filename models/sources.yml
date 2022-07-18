@@ -44,6 +44,14 @@ sources:
             tests:
               - unique
               - not_null
+          - name: price
+            tests:
+              - greater_than:
+                  number: 26
+                  config:
+                    severity: error
+                    error_if: ">10"
+                    warn_if: ">5"
       
       - name: products
         columns:
