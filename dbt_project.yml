@@ -45,3 +45,6 @@ vars:
     github_database: analytics-engineers-club
     github_schema: github
     github__using_repo_team: false # by default this is assumed to be true
+
+  github:
+    github__using_repo_team: false
