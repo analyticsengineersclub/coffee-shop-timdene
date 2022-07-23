@@ -7,6 +7,6 @@ packages:
     version: 0.7.0
     # https://hub.getdbt.com/dbt-labs/codegen/0.7.0/
 
-  - package: fivetran/github
-    version: 0.5.1
-    # https://hub.getdbt.com/fivetran/github/0.5.1/
+  # - package: fivetran/github
+  #   version: 0.5.1
+  #   # https://hub.getdbt.com/fivetran/github/0.5.1/
